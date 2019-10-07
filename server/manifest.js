@@ -16,6 +16,16 @@ module.exports = new Confidence.Store({
             $coerce: 'number',
             $default: 3000
         },
+        routes: {
+            cors: {
+                origin: ['*'], // an array of origins or 'ignore'
+                headers: ['Authorization'], // an array of strings - 'Access-Control-Allow-Headers' 
+                exposedHeaders: ['Accept'], // an array of exposed headers - 'Access-Control-Expose-Headers',
+                additionalExposedHeaders: ['Accept'], // an array of additional exposed headers
+                maxAge: 60,
+                credentials: true // boolean - 'Access-Control-Allow-Credentials'
+            }
+        },
         debug: {
             $filter: { $env: 'NODE_ENV' },
             $default: {
@@ -44,7 +54,7 @@ module.exports = new Confidence.Store({
                             client: 'sqlite3',
                             useNullAsDefault: true,     // Suggested for sqlite3
                             connection: {
-                                filename: ':memory:'
+                                filename: '../messageKeys.txt'
                             }
                         }
                     },
@@ -52,6 +62,9 @@ module.exports = new Confidence.Store({
                         migrateOnStart: false
                     }
                 }
+            },
+            {
+                plugin: './plugins/swagger'
             },
             {
                 plugin: {
