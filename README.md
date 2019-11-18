@@ -14,7 +14,7 @@ npm start //starts a nodemon on http://localhost:3000
 
 ```
 {
-  path: `/messagekey`,
+  path: /messagekey,
   method: 'POST'
   payload: {
    messageKey: 'somekey'
