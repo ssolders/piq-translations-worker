@@ -32,6 +32,7 @@
     "eslint-config-standard": "^14.1.0",
     "hpal": "^2.2.1",
     "hpal-debug": "1.x.x",
+    "nodemon": "^1.19.4",
     "toys": "2.x.x"
   },
   "keywords": [
