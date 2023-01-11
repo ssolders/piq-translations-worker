@@ -22,7 +22,7 @@
     "schwifty": "4.x.x"
   },
   "peerDependencies": {
-    "knex": "0.19.x"
+    "knex": "2.4.x"
   },
   "devDependencies": {
     "@hapi/code": "6.x.x",
@@ -42,7 +42,7 @@
     "hpal": "2.x.x",
     "hpal-debug": "1.x.x",
     "nodemon": "^1.19.4",
-    "knex": "0.19.x",
+    "knex": "2.4.x",
     "schwifty": "4.2.2",
     "sqlite3": "4.x.x",
     "toys": "2.x.x"
